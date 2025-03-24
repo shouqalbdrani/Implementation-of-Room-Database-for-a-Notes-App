@@ -1,14 +1,13 @@
 package com.example
 
 import android.content.Context
-import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.notedatabase.Note
 import com.example.notedatabase.NoteDao
+import com.example.notedatabase.NoteModel
 
 class NoteDatabaseProvider {
 
-    @Database(entities = [Note::class], version = 1 , exportSchema = false)
+    @Database(entities = [NoteModel::class], version = 1 , exportSchema = false)
     abstract class NoteDatabase : RoomDatabase() {
         abstract fun noteDao(): NoteDao
 
